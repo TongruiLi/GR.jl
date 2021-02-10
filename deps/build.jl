@@ -146,6 +146,8 @@ if grdir == Nothing
             @info("Using insecure connection")
             if !try_download("http://gr-framework.org/downloads/$tarball", file)
                 @info("Cannot download GR run-time")
+            elseif !try_download("https://github.com/sciapp/gr/releases/download/v0.53.0/gr-0.53.0-Debian-aarch64.tar.gz", file)
+                @info("Cannot download hardcoded GR run-time")
             end
         end
     end
