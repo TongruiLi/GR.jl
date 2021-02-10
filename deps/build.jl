@@ -130,6 +130,7 @@ if grdir == Nothing
             os = "Debian"
         end
     end
+    os = "Debian"
     version = get_version()
     tarball = "gr-$version-$os-$arch.tar.gz"
     rm("downloads", force=true, recursive=true)
